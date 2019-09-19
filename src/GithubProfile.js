@@ -12,8 +12,8 @@ export function GithubProfile() {
       {profile.isLoading && "Loading Profile Info"}
       {!profile.isLoading && (
         <ul>
-          {Object.keys(profile).map(key => (
-            <li>
+          {Object.keys(profile).map((key, idx) => (
+            <li key={idx}>
               {key}: {profile[key]}
             </li>
           ))}
